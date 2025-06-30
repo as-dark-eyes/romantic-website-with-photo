@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Enter Name</title>
+  <link rel="stylesheet" href="style.css">
+</head><body>
+  <h1>Please enter your name</h1>
+  <input id="nameInput" placeholder="Your name">
+  <button onclick="submitName()">Enter</button>
+  <script src="script.js"></script>
+  <script>
+    initAnimation('romantic');
+    function submitName() {
+      const name = document.getElementById('nameInput').value.trim();
+      if (name) {
+        localStorage.setItem('loverName', name);
+        window.location = 'page2.html';
+      }
+    }
+  </script>
+</body></html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Love You</title>
+  <link rel="stylesheet" href="style.css">
+</head><body>
+  <audio autoplay loop>
+    <source src="https://www.youtube.com/watch?v=Ot3BZcYCeZE&autoplay=1">
+  </audio>
+  <h1 id="loveMsg"></h1>
+  <p id="question"></p>
+  <button onclick="goThird()">Yes</button>
+  <button id="noBtn">No</button>
+  <script src="script.js"></script>
+  <script>
+    initAnimation('romantic');
+    const name = localStorage.getItem('loverName');
+    document.getElementById('loveMsg').innerText = `I love you so much, ${name}!`;
+    document.getElementById('question').innerText = `Do you love me, ${name}?`;
+    document.getElementById('noBtn').onmouseover = () =>
+      document.getElementById('noBtn').style.transform =
+      `translate(${Math.random()*200-100}px, ${Math.random()*200-100}px)`;
+    function goThird() { window.location = 'page3.html'; }
+  </script>
+</body></html>
